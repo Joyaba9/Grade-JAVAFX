@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="700.0" maxWidth="700.0" minHeight="300.0" minWidth="300.0" prefHeight="700.0" prefWidth="700.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bryan.grade.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <MenuBar maxWidth="700.0" minWidth="700.0" prefWidth="700.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onLoadDBfromJSONclick" text="Load DB from JSON" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExitclick" text="Close" />
+               </items>
+            </Menu>
+         </menus>
+         <VBox.margin>
+            <Insets top="-375.0" />
+         </VBox.margin>
+      </MenuBar>
+      <HBox prefHeight="44.0" prefWidth="610.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addGrade" text="Add Grade to DB">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="nameField" promptText="Name">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="categoryField" promptText="Category">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="scoreField" promptText="Score">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onDisplayfromDBclick" text="Display Grades From DB">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </Button>
+            <ListView fx:id="listViewShows" prefHeight="308.0" prefWidth="660.0" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
